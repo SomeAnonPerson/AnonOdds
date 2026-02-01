@@ -7,7 +7,7 @@ All Rights Reserved.
 
 # ![AnonOdds - The First Anonymous SportsBook](logo.png)
 
-[![GitHub stars](https://img.shields.io/github/stars/SomeAnonPerson/AnonOdds.svg)](https://github.com/SomeAnonPerson/AnonOdds/stargazers) [![GitHub license](https://img.shields.io/github/license/SomeAnonPerson/AnonOdds.svg)](https://raw.githubusercontent.com/SomeAnonPerson/AnonOdds/Beta/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/SomeAnonPerson/AnonOdds.svg)](https://github.com/SomeAnonPerson/AnonOdds/stargazers) [![GitHub license](https://img.shields.io/github/license/SomeAnonPerson/AnonOdds.svg)](https://raw.githubusercontent.com/SomeAnonPerson/AnonOdds/LICENSE)
 
 > ### AnonOdds - The First Anonymous SportsBook built with Laravel 12.47.0
 > 
