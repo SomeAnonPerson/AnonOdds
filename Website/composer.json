@@ -1,41 +1,40 @@
 {
-    "name": "laravel/laravel",
+    "name": "skotos/anonodds",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "description": "AnonOdds - The First Anonymous SportsBook",
+    "keywords": ["sportsbook", "betting", "laravel", "anonymous", "darknet"],
+    "license": "proprietary",
     "require": {
-        "php": "^7.3|^8.0",
-        "anandsiddharth/laravel-paytm-wallet": "^2.0",
+        "php": "^8.2",
+        "anandsiddharth/laravel-paytm-wallet": "^2.1",
         "authorizenet/authorizenet": "^2.0",
-        "coingate/coingate-php": "^3.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "intervention/image": " ^2.5",
-        "kingflamez/laravelrave": "^4.2",
-        "laravel/framework": "^8.75",
-        "laravel/passport": "^10.4",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "laravelcollective/html": "^6.2",
-        "mollie/laravel-mollie": "^2.19",
+        "coingate/coingate-php": "^4.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "intervention/image": "^3.0",
+        "kingflamez/laravelrave": "^4.4",
+        "laravel/framework": "^12.47",
+        "laravel/passport": "^12.0",
+        "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.10",
+        "laravelcollective/html": "^6.5",
+        "mollie/laravel-mollie": "^3.0",
         "obydul/laraskrill": "^1.1",
-        "phpmailer/phpmailer": "^6.5",
-        "securionpay/securionpay-php": "^2.4.0",
-        "spatie/laravel-cookie-consent": "^2.12",
-        "spatie/laravel-permission": "^5.5",
+        "phpmailer/phpmailer": "^6.9",
+        "securionpay/securionpay-php": "^2.4",
+        "spatie/laravel-cookie-consent": "^3.3",
+        "spatie/laravel-permission": "^6.0",
         "srmklive/paypal": "^3.0",
-        "stripe/stripe-php": "^7.36",
-        "unicodeveloper/laravel-paystack": "^1.0"
+        "stripe/stripe-php": "^15.0",
+        "unicodeveloper/laravel-paystack": "^1.1"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "laravel/ui": "^3.4",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.29",
+        "laravel/ui": "^4.5",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.0",
+        "phpunit/phpunit": "^11.0"
     },
     "autoload": {
         "psr-4": {
@@ -43,7 +42,9 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
-        "files": ["app/Http/Helpers/helpers.php"]
+        "files": [
+            "app/Http/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -74,9 +75,10 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "platform-check": false
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
-
 }
