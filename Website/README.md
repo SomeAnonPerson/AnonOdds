@@ -7,8 +7,6 @@ All Rights Reserved.
 
 # ![AnonOdds - The First Anonymous SportsBook](logo.png)
 
-[![GitHub stars](https://img.shields.io/github/stars/SomeAnonPerson/AnonOdds.svg)](https://github.com/SomeAnonPerson/AnonOdds/stargazers) [![GitHub license](https://img.shields.io/github/license/SomeAnonPerson/AnonOdds.svg)](https://raw.githubusercontent.com/SomeAnonPerson/AnonOdds/refs/heads/Beta/LICENSE.MD)
-
 > ### AnonOdds - The First Anonymous SportsBook built with Laravel 12.47.0
 > 
 > A revolutionary anonymous sportsbook platform featuring secure betting, user authentication, advanced patterns, and a pure HTML/CSS interface with zero JavaScript dependencies.
