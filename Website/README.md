@@ -1,105 +1,143 @@
-# ![Gaming & Betting Project](logo.png)
+<!--
+AnonOdds - The First Anonymous SportsBook
+Copyright (c) 2026 AnonOdds
+Created by: Skotos (Creator/Owner/Admin)
+All Rights Reserved.
+-->
 
-[![Build Status](https://img.shields.io/travis/gothinkster/laravel-realworld-example-app/master.svg)](https://travis-ci.org/gothinkster/laravel-realworld-example-app) [![Gitter](https://img.shields.io/gitter/room/realworld-dev/laravel.svg)](https://gitter.im/realworld-dev/laravel) [![GitHub stars](https://img.shields.io/github/stars/gothinkster/laravel-realworld-example-app.svg)](https://github.com/gothinkster/laravel-realworld-example-app/stargazers) [![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
+# ![AnonOdds - The First Anonymous SportsBook](logo.png)
 
-> ### Example Laravel codebase containing real world examples (CRUD, auth, advanced patterns and more) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
+[![GitHub stars](https://img.shields.io/github/stars/SomeAnonPerson/AnonOdds.svg)](https://github.com/SomeAnonPerson/AnonOdds/stargazers) [![GitHub license](https://img.shields.io/github/license/SomeAnonPerson/AnonOdds.svg)](https://raw.githubusercontent.com/SomeAnonPerson/AnonOdds/Beta/LICENSE)
 
-This repo is functionality complete — PRs and issues welcome!
+> ### AnonOdds - The First Anonymous SportsBook built with Laravel 12.47.0
+> 
+> A revolutionary anonymous sportsbook platform featuring secure betting, user authentication, advanced patterns, and a pure HTML/CSS interface with zero JavaScript dependencies.
+
+This repository contains a proprietary anonymous sportsbook application built with modern Laravel architecture and privacy-first design principles.
+
+**Key Features:**
+- 🎯 Pure HTML/CSS Interface (Zero JavaScript)
+- 🔒 Privacy-Focused Architecture
+- 🏈 Complete Sportsbook Functionality
+- 🎲 Secure Betting System
+- 👤 Advanced User Authentication
+- 📊 Real-time Odds Management
+- 🌐 Anonymous Access & Operations
 
 ----------
 
-# Getting started
+# About AnonOdds
 
-## Installation
+AnonOdds is a proprietary platform designed to provide the most secure and anonymous sports betting experience available. Built on Laravel 12.47.0, our platform eliminates JavaScript entirely, using pure HTML/CSS for enhanced security and privacy.
 
-Clone the repository
+## Architecture
 
-    git clone https://github.com/devprantoroy/gaming-and-beting.git
+AnonOdds is built on Laravel 12.47.0 with the following architectural decisions:
 
-Switch to the repo folder
+- **Pure HTML/CSS UI**: No JavaScript dependencies for enhanced security and privacy
+- **Bootstrap Architecture**: Middleware configuration moved to `bootstrap/app.php` (Kernel.php removed)
+- **Modern Laravel Structure**: Utilizes Laravel 12.47.0 best practices and patterns
+- **Server-Side Rendering**: All operations performed server-side for maximum security
 
-    cd gaming-and-beting
+## Technology Stack
 
-Install all the dependencies using composer
+- **Framework**: Laravel 12.47.0
+- **PHP**: 8.2+
+- **Database**: MySQL 8.0+ / PostgreSQL 13+
+- **Frontend**: Pure HTML/CSS (Zero JavaScript)
+- **Security**: Advanced encryption and anonymization protocols
 
-    composer install
+----------
 
-Copy the example env file and make the required configuration changes in the .env file
+# Code Overview
 
-    cp .env.example .env
+## Folder Structure
 
-Generate a new application key
-
-    php artisan key:generate
-
-Run the database migrations (**Set the database connection in .env before migrating**)
-
-    php artisan migrate:refresh --seed
-
-Start the local development server
-
-You can now access the server at http://localhost/gaming-and-beting
-
-**TL;DR command list**
-
-    git clone https://github.com/devprantoroy/gaming-and-beting.git
-    cd gaming-and-beting
-    composer install
-    cp .env.example .env
-    php artisan key:generate
-    
-**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
-
-    php artisan migrate:refresh --seed
-
-## Database seeding
-
-**Populate the database with seed data with relationships which includes users, articles, comments, tags, favorites and follows. This can help you to quickly start testing the api or couple a frontend and start using it with ready content.**
-
-Open the DummyDataSeeder and set the property values as per your requirement
-
-    database/seeds/DummyDataSeeder.php
-
-Run the database seeder and you're done
-
-    php artisan db:seed
-
-***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
-
-    php artisan migrate:refresh
-
-
-
-# Code overview
+- `app/Models` - Contains all the Eloquent models (Users, Bets, Odds, Events, etc.)
+- `app/Http/Controllers` - Contains all the application controllers
+- `app/Http/Middleware` - Contains authentication and security middleware
+- `app/Http/Requests` - Contains all the form requests and validation
+- `bootstrap/app.php` - Application bootstrap and middleware configuration (replaces Kernel.php)
+- `app/Services/Betting` - Contains the betting logic and odds calculation
+- `app/Services/Filters` - Contains the query filters for filtering requests
+- `app/Services/Transformers` - Contains all the data transformers
+- `config` - Contains all the application configuration files
+- `database/factories` - Contains the model factories for all models
+- `database/migrations` - Contains all the database migrations
+- `database/seeders` - Contains the database seeders
+- `routes` - Contains all the routes defined in web.php and api.php
+- `resources/views` - Contains all Blade templates (Pure HTML/CSS)
+- `tests` - Contains all the application tests
+- `tests/Feature` - Contains all the feature tests
 
 ## Dependencies
 
 - [laravel-cors](https://github.com/barryvdh/laravel-cors) - For handling Cross-Origin Resource Sharing (CORS)
-
-## Folders
-
-- `app` - Contains all the Eloquent models
-- `app/Http/Controllers/Api` - Contains all the api controllers
-- `app/Http/Middleware` - Contains the JWT auth middleware
-- `app/Http/Requests/Api` - Contains all the api form requests
-- `app/RealWorld/Favorite` - Contains the files implementing the favorite feature
-- `app/RealWorld/Filters` - Contains the query filters used for filtering api requests
-- `app/RealWorld/Follow` - Contains the files implementing the follow feature
-- `app/RealWorld/Paginate` - Contains the pagination class used to paginate the result
-- `app/RealWorld/Slug` - Contains the files implementing slugs to articles
-- `app/RealWorld/Transformers` - Contains all the data transformers
-- `config` - Contains all the application configuration files
-- `database/factories` - Contains the model factory for all the models
-- `database/migrations` - Contains all the database migrations
-- `database/seeds` - Contains the database seeder
-- `routes` - Contains all the api routes defined in api.php file
-- `tests` - Contains all the application tests
-- `tests/Feature/Api` - Contains all the api tests
-
-## Environment variables
-
-- `.env` - Environment variables can be set in this file
-
-***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
+- Laravel 12.47.0 Framework Components
 
 ----------
+
+# Security & Privacy
+
+AnonOdds is built with privacy and security as top priorities:
+
+- ✅ Pure HTML/CSS architecture eliminates JavaScript-based tracking vectors
+- ✅ No client-side scripting reduces attack surface
+- ✅ Server-side rendering for all functionality
+- ✅ Built for anonymous deployment with Tor compatibility
+- ✅ Advanced encryption for all sensitive data
+- ✅ Zero-knowledge architecture for user privacy
+
+----------
+
+# Contributing & Community
+
+We welcome community participation within the bounds of our proprietary license:
+
+✅ **You MAY:**
+- View the source code
+- Submit issues and bug reports
+- Suggest features and improvements
+- Participate in discussions
+
+❌ **You MAY NOT:**
+- Make modifications without prior written authorization from Skotos
+- Redistribute or fork this code
+- Use this code in derivative works
+- Deploy your own instance without licensing
+
+Please read our [LICENSE.md](LICENSE.md) for complete terms and conditions.
+
+To submit issues or suggestions, please use our issue tracker or contact us through secure channels.
+
+----------
+
+# License
+
+This project is proprietary software owned by AnonOdds and Skotos. All rights reserved.
+
+For complete licensing terms, see [LICENSE.md](LICENSE.md).
+
+For licensing inquiries, contact: Skotos via secure channels.
+
+----------
+
+# Support
+
+For support and questions, please contact the AnonOdds team through secure channels.
+
+**Created by Skotos - The First Anonymous SportsBook**
+
+----------
+
+# Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
+
+----------
+
+**AnonOdds** - Revolutionizing anonymous sports betting since 2026.
+
+---
+
+© 2026 AnonOdds. Created by Skotos. All Rights Reserved.
